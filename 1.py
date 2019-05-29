@@ -1,39 +1,36 @@
-arg = [152, 'asd']
-def what (arg):
-      print('Тип пргумента:{}'.format(type(arg)))
+arg = 152
+    
       
-def what2(spis):
-    cel = int()
-    stok = int()
-    bul = int()
-    necel = int()
-    net = int()
-    itogo = int()
-    dlinna = len(arg)
-    for i in range(0, dlinna):
-        if type(spis[i]) == int:
-            cel = cel + 1
-        elif type(spis[i]) == str:
-            stok = stok + 1
-        elif type(spis[i]) == bool:
-            bul = bul + 1
-        elif type(spis[i]) == float:
-            necel = necel + 1
+def chek_of_type(spis):
+    if type(arg) == list:
+        integer = int()
+        string = int()
+        boolean = int()
+        float1 = int()
+        total = int()
+        long = len(arg)
+        for i in range(0, long):
+            if type(spis[i]) == int:
+                integer = integer + 1
+            elif type(spis[i]) == str:
+                string = string + 1
+            elif type(spis[i]) == bool:
+                boolean = boolean + 1
+            elif type(spis[i]) == float:
+                float1 = float1 + 1
        
-    if cel > 0:
-        itogo = itogo + 1
-    if stok > 0:
-        itogo = itogo + 1
-    if bul > 0:
-        itogo = itogo + 1
-    if net > 0:
-        itogo = itogo + 1
-    if necel > 0:
-        itogo = itogo + 1                    
-    print('Всего типов в списке: {}'.format(itogo))
-if type(arg) == list:
-    what2(arg)
-else:
-    what(arg)
+        if integer > 0:
+            total = total + 1
+        if string > 0:
+            total = total + 1
+        if boolean > 0:
+            total = total + 1
+        if float1 > 0:
+            total = total + 1                        
+        print('Всего типов в списке: {}'.format(total))
+    else:
+        print('Тип пргумента:{}'.format(type(arg)))
+
+chek_of_type(arg)
 
 
